@@ -1,0 +1,185 @@
+/* styles11PROYECTO.css */
+
+/* Estilos generales */
+body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #e0f7fa, #b2ebf2, #80deea); /* Fondo gradiente claro */
+    color: #333333;
+    overflow-x: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+/* Header futurista */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(0, 128, 128, 0.6); /* Fondo semitransparente */
+    padding: 15px 30px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 10;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.logo {
+    font-size: 26px;
+    font-weight: 600;
+    color: #00796b;
+    text-shadow: 0 0 8px rgba(0, 150, 136, 0.8);
+}
+
+nav a {
+    color: #ffffff;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: 500;
+    transition: color 0.3s, transform 0.3s;
+}
+
+nav a:hover {
+    color: #00796b;
+    transform: translateY(-3px);
+}
+
+/* Efecto de entrada */
+@keyframes fadeIn {
+    0% { opacity: 0; transform: translateY(20px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+/* Main con una sola caja */
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 90px 20px;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+/* Estilo de la caja de contenido única */
+.caja-contenido {
+    max-width: 800px;
+    padding: 80px 40px;
+    background: rgba(255, 255, 255, 0.8); /* Fondo blanco semitransparente */
+    border-radius: 15px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    text-align: center; /* Centrado de texto dentro de la caja */
+    margin: 20px;
+}
+
+.caja-contenido h1 {
+    font-size: 42px; /* Texto más grande */
+    color: #00796b;
+    text-shadow: 0 0 6px rgba(0, 150, 136, 0.6);
+    margin-bottom: 20px;
+   
+    
+}
+
+.caja-contenido h2 {
+    font-size: 24px; /* Tamaño mayor */
+    color: #004d40;
+    line-height: 1.8; /* Mayor interlineado */
+    margin-bottom: 15px;
+    
+}
+
+.caja-contenido p {
+    font-size: 20px;
+    color: #00796b;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    line-height: 1.6; /* Más espacio entre líneas */
+    
+}
+
+/* Botón futurista */
+button {
+    background: linear-gradient(90deg, #00796b, #004d40);
+    color: #ffffff;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 18px; /* Tamaño del botón más grande */
+    font-weight: 600;
+    text-transform: uppercase;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 12px rgba(0, 150, 136, 0.5);
+    margin-top: 20px;
+}
+
+button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 15px rgba(0, 150, 136, 0.7);
+}
+
+.texto {
+
+    padding: 150px 50px
+}
+
+/* Media Queries para Responsive Design */
+@media (max-width: 768px) { /* Para tabletas y móviles grandes */
+    header {
+        flex-direction: column;
+        align-items: flex-start; /* Alinear a la izquierda */
+        padding: 10px 20px; /* Menos padding */
+    }
+
+    nav {
+        flex-direction: column; /* Navegación vertical */
+        width: 100%; /* Ancho completo */
+        align-items: flex-start; /* Alinear a la izquierda */
+    }
+
+    nav a {
+        margin: 5px 0; /* Espaciado vertical entre enlaces */
+    }
+
+    .imagen {
+        flex-direction: column; /* Asegura que los elementos sean verticales en móviles */
+    }
+
+    .texto {
+        padding: 20px; /* Menos padding en móvil */
+    }
+
+    h1 {
+        font-size: 30px; /* Reducir tamaño de fuente */
+    }
+
+    h2 {
+        font-size: 20px; /* Reducir tamaño de fuente */
+    }
+
+    button {
+        padding: 10px 20px; /* Ajustar padding del botón */
+        font-size: 16px; /* Ajustar tamaño de fuente */
+    }
+}
+
+@media (max-width: 480px) { /* Para móviles */
+    h1 {
+        font-size: 26px; /* Reducir tamaño de fuente aún más */
+    }
+
+    h2 {
+        font-size: 18px; /* Reducir tamaño de fuente aún más */
+    }
+
+    button {
+        width: 100%; /* Botón de ancho completo */
+        font-size: 14px; /* Ajustar tamaño de fuente */
+    }
+}
